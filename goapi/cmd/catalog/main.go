@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/devfullcycle/imersao17/goapi/internal/database"
-	"github.com/devfullcycle/imersao17/goapi/internal/service"
-	"github.com/devfullcycle/imersao17/goapi/internal/webserver"
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/chi/v5"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/leandrovboas/e-commerce-imersao/tree/main/goapi/internal/database"
+	"github.com/leandrovboas/e-commerce-imersao/tree/main/goapi/internal/service"
+	"github.com/leandrovboas/e-commerce-imersao/tree/main/goapi/internal/webserver"
 )
 
 func main() {

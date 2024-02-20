@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/devfullcycle/imersao17/goapi/internal/entity"
-	"github.com/devfullcycle/imersao17/goapi/internal/service"
 	"github.com/go-chi/chi/v5"
+	"github.com/leandrovboas/e-commerce-imersao/tree/main/goapi/internal/entity"
+	"github.com/leandrovboas/e-commerce-imersao/tree/main/goapi/internal/service"
 )
 
 type WebCategoryHandler struct {

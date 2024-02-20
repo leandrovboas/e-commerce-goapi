@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/devfullcycle/imersao17/goapi/internal/entity"
-	"github.com/devfullcycle/imersao17/goapi/internal/service"
 	"github.com/go-chi/chi/v5"
+	"github.com/leandrovboas/e-commerce-imersao/tree/main/goapi/internal/entity"
+	"github.com/leandrovboas/e-commerce-imersao/tree/main/goapi/internal/service"
 )
 
 type WebProductHandler struct {
@@ -61,7 +61,7 @@ func (wph *WebProductHandler) CreateProduct(w http.ResponseWriter, r *http.Reque
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	result, err := wph.ProductService.CreateProduct(product.Name, product.Description, product.CategoryID, product.ImageURL, product.Price)
+	result, err := wph.ProductService.CreateProduct(product.Name, product.Description, product.Price, product.CategoryID, product.ImageURL)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

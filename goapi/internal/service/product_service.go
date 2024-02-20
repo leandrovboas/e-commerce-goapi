@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/devfullcycle/imersao17/goapi/internal/database"
-	"github.com/devfullcycle/imersao17/goapi/internal/entity"
+	"github.com/leandrovboas/e-commerce-imersao/tree/main/goapi/internal/database"
+	"github.com/leandrovboas/e-commerce-imersao/tree/main/goapi/internal/entity"
 )
 
 type ProductService struct {
@@ -37,8 +37,8 @@ func (ps *ProductService) GetProductByCategoryID(categoryID string) ([]*entity.P
 	return products, nil
 }
 
-func (ps *ProductService) CreateProduct(name, description, category_id, image_url string, price float64) (*entity.Product, error) {
-	product := entity.NewProduct(name, description, category_id, image_url, price)
+func (ps *ProductService) CreateProduct(name string, descriptrion string, price float64, categoryID string, ImageURL string) (*entity.Product, error) {
+	product := entity.NewProduct(name, descriptrion, price, categoryID, ImageURL)
 	_, err := ps.ProductDB.CreateProduct(product)
 	if err != nil {
 		return nil, err
